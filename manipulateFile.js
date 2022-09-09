@@ -6,7 +6,7 @@ module.exports = {
     manipulateFiles: function () {
 
         //lê o arquivo template e o transforma em um JSON
-        const data = JSON.parse(fs.readFileSync("./src/template_promotionalCode_redemption.json", "utf-8"))
+        const data = JSON.parse(fs.readFileSync("./src/codigosPromos.json", "utf-8"))
 
         let content = []
 
