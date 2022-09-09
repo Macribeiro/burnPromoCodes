@@ -12,7 +12,7 @@ module.exports = {
 
         //para cada objeto dentro da const data o array content irá receber um comando de mongodb
         data.forEach(x => {
-            content.push(`\ndb.promotionalCode.updateOne({_id: ${x._id}}, {$set: {code: ${x.code}, participantIdentifier: ${x.cpf}}})`)
+            content.push(`\ndb.promotionalCode.updateOne({_id: "${x._id}"}, {$set: {code: "${x.code}", promotionalCodeStatus: "${x.promotionalCodeStatus}" ,participantIdentifier: "${x.participantIdentifier}", transactionID: "${x.transactionID}", burnedDate: "${x.burnedDate}"}})`)
         })
 
         //escrevemos um arquivo com os comandos na nossa pasta data
